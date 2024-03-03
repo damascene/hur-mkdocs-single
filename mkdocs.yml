@@ -9,4 +9,5 @@ plugins:
       tags_file: tags.md
 
 
+# Generate content to `public` directory. Default is `site`
 site_dir: 'public'
