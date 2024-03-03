@@ -1,4 +1,4 @@
-image: python:3.11-alpine
+image: python:3.10-alpine
 
 before_script:
   - pip install mkdocs-material tomli snakemd
