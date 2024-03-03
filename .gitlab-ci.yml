@@ -1,7 +1,7 @@
-image: squidfunk/mkdocs-material
+image: 3.11-alpine
 
 before_script:
-  - pip install tomli snakemd
+  - pip install mkdocs-material tomli snakemd
 
 pages:
   stage: deploy
