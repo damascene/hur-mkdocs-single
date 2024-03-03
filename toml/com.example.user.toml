@@ -1,0 +1,59 @@
+file_format = "0.1.1"
+file_language = "en"
+
+tags = [ "Design", "C", "image", "Programming", "logo" ]
+
+[data]
+name = "John Smith"
+profile_image = "https://picsum.photos/id/175/100/100"
+user_description = "Senior developer worked on large projects with few team members. I enjoy football and seafood"
+hourly_rate = 70
+
+[[data.website]]
+text = "https://www.duhig.ca"
+id = "lap77mv0f"
+
+[[data.website]]
+text = "https://www.faw.ca"
+id = "ilia4uin2"
+
+[data.addresses]
+
+bch = "bitcoincash:qzgl22szd975lgghhd6um392g8dvkjzz7syn6mg8gz"
+ltc = "LLTzfkj7iCKWc2HeQXr3ofK3Ru7Xvs8gFe"
+
+[[services]]
+category = "Programming"
+sub_category = "C"
+title = "Professional C development"
+description = """
+I can help you build your project in C language for maximum speed and efficiency
+
+* test
+* test2
+* test3 
+
+#### another title
+
+"""
+price = 80
+service_image = [ "https://picsum.photos/id/20/700/400" ]
+id = "e49rbewvo"
+
+[[services]]
+category = "Design"
+sub_category = "image"
+title = "Design Images for Your Business"
+description = "I've experience in using Gimp to create professional images for your website and business"
+price = 50
+service_image = [ "https://picsum.photos/id/0/700/400" ]
+id = "fkuhws01b"
+
+[[services]]
+category = "Design"
+sub_category = "logo"
+title = "Professional logo design"
+description = "I've created several logos for respected business that got approved by higher management and are being used as brand logo"
+price = 60
+service_image = [ "https://picsum.photos/id/163/700/400" ]
+id = "893eurqly"
