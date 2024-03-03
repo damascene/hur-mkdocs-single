@@ -171,9 +171,9 @@ def create_markdown(toml_dict, toml_file, file_language):
         file_name_stem = Path(toml_file).stem
 
         if generator == "pelican":
-            doc.add_raw(f"<a id='toml_file' href='toml/{file_name_stem}.toml'>* Toml file!</a>")
+            doc.add_raw(f"<a id='toml_file' href='toml/{file_name_stem}.toml'> * Toml file!</a>")
         elif generator == "mkdocs-material":
-            doc.add_raw(f"<a id='toml_file' href='toml/{file_name_stem}.toml'>* Toml file!</a>")
+            doc.add_raw(f"<a id='toml_file' href='../toml/{file_name_stem}.toml'> * Toml file!</a>")
 
         # ~ doc.add_heading(contact_accounts_title, 3)
         # ~ doc.add_unordered_list(contact_methods)
