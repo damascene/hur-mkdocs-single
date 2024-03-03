@@ -7,3 +7,6 @@ plugins:
   - search
   - tags:
       tags_file: tags.md
+
+
+site_dir: 'public'
