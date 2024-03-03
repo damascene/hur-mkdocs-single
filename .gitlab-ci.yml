@@ -6,7 +6,7 @@ before_script:
 pages:
   stage: deploy
   script:
-    - python covnert_toml2md.py toml/ docs/
+    - python convert_toml2md.py toml/ docs/
     - mkdocs build --strict --verbose
   artifacts:
     paths:
