@@ -11,18 +11,28 @@ To create your own static site to show your services and provide it to the world
 1. Fork this repository
   1. If you want it to be the main website name it ("github_username.github.io")
 2. Change `site_name:` in `mkdocs.yml`
-3. replace `docs/toml/com.example.user.toml` file with your own data.
+3. rename `docs/toml/com.gitlab.example_user.toml` file to your own username.
+  * if your gitlab username is my_user you name the file `com.gitlab.my_user.toml`
 4. From Gitlab left panel go to Deploy > Pages, there:
   1. Check _Force HTTPS (requires valid certificates)_
-  2. Uncheck __Use unique domain__
+  2. Uncheck _Use unique domain_
 
 This should be it.
 
 
 ## Hints
 
+### Creating TOML profile
+
 To generate your own data you can use the profile generation tool at:
 https://hur-project.gitlab.io/hur-frontend-sveltekit/
+
+### Style and Customization 
+
+This software is based on Material for MkDocs. It has many style and customization options
+
+https://squidfunk.github.io/mkdocs-material/
+
 
 ## License
 
