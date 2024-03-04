@@ -8,6 +8,8 @@ name = "John Smith"
 profile_image = "https://picsum.photos/id/175/100/100"
 user_description = "Senior developer worked on large projects with few team members. I enjoy football and seafood"
 hourly_rate = 70
+available = True
+allow_listing = True  # Allow listing in services
 
 [[data.website]]
 text = "https://www.duhig.ca"
