@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mkdocs-hur-single-user"
+version = "0.1.0"
+description = ""
+authors = ["uak <4626956-uak@users.noreply.gitlab.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+mkdocs-material = "^9.5.12"
+snakemd = "^2.2.0"
+tomli = "^2.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
