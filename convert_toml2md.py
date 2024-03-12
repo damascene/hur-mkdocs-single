@@ -6,6 +6,8 @@ import sys
 import glob
 import os
 
+from helpers import extract_domain
+
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)  # INFO - DEBUG
 
@@ -14,6 +16,18 @@ i18n_toml = Path(__file__).parent / "i18n.toml"
 latest_format_version = "0.1.1"
 
 generator = "mkdocs-material"
+
+url_logo_dict = {
+    "hub.docker.com" : ":fontawesome-brands-docker:",
+    "www.youtube.com" : ":fontawesome-brands-youtube:",
+    "youtu.be" : ":simple-youtube",
+    "www.behance.net" : ":fontawesome-brands-behance:",
+    "www.fiverr.com" : ":simple-fiverr:",
+    "www.freelancer.com" : ":simple-freelancer:",
+    "www.upwork.com" : ":simple-upwork:",
+    "linktr.ee" : ":simple-linktree:",
+}
+
 
 try:
     logger.debug(sys.argv[1])
@@ -161,7 +175,13 @@ def create_markdown(toml_dict, toml_file, file_language):
 
         for i in toml_dict[data][website]:
             website_link = i["text"]
-            site_list.append(f"[{website_link}]({website_link})")
+            domain = extract_domain(website_link)
+            try:
+                logo = url_logo_dict[domain]
+            except:
+                logo = ""
+                
+            site_list.append(f"{logo} [{website_link}]({website_link})")
 
         logger.debug(f"site_list {site_list}")
 
@@ -171,9 +191,9 @@ def create_markdown(toml_dict, toml_file, file_language):
         file_name_stem = Path(toml_file).stem
 
         if generator == "pelican":
-            doc.add_raw(f"<ul><li><a id='toml_file' href='toml/{file_name_stem}.toml'>Toml file!</a></li></ul>")
+            doc.add_raw(f":simple-toml: <a id='toml_file' href='toml/{file_name_stem}.toml'>Toml file!</a>")
         elif generator == "mkdocs-material":
-            doc.add_raw(f"<ul><li><a id='toml_file' href='../toml/{file_name_stem}.toml'>Toml file!</a></li></ul>")
+            doc.add_raw(f":simple-toml: <a id='toml_file' href='../toml/{file_name_stem}.toml'>Toml file!</a>")
 
         # ~ doc.add_heading(contact_accounts_title, 3)
         # ~ doc.add_unordered_list(contact_methods)
