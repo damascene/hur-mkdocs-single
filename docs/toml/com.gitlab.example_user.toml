@@ -6,17 +6,33 @@ tags = [ "Design", "C", "image", "Programming", "logo" ]
 [data]
 name = "John Smith"
 profile_image = "https://picsum.photos/id/175/100/100"
-user_description = "Senior developer worked on large projects with few team members. I enjoy football and seafood"
+
+user_description = """
+Senior developer worked on large projects with few team members. I enjoy football and seafood. I've worked in an anonymous corporation for 5 years. :smile:
+"""
+
 hourly_rate = 70
 available = true
 allow_listing = true  # Allow listing in services
 
 [[data.website]]
-text = "https://www.duhig.ca"
+text = "https://www.twitter.com/fake_account"
 id = "lap77mv0f"
 
 [[data.website]]
-text = "https://www.faw.ca"
+text = "https://www.youtube.com/fake_account"
+id = "lap77mv0f"
+
+[[data.website]]
+text = "https://www.github.com/fake_account"
+id = "lap7xv0f"
+
+[[data.website]]
+text = "https://www.gitlab.com/fake_account"
+id = "lap7xv0f"
+
+[[data.website]]
+text = "https://www.behance.net/fake_account"
 id = "ilia4uin2"
 
 [data.addresses]
