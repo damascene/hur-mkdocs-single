@@ -5,6 +5,8 @@ url_logo_dict = {
     "www.youtube.com" : ":fontawesome-brands-youtube:",
     "youtube.com" : ":fontawesome-brands-youtube:",
     "www.twitter.com" : ":simple-twitter:",
+    "www.github.com" : ":simple-github:",
+    "www.gitlab.com" : ":simple-gitlab:",
     "www.x.com" : ":simple-x:",
     "matrix.org" : ":simple-matrix:",
     "matrix.to" : ":simple-matrix:",
