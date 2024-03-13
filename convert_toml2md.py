@@ -6,7 +6,7 @@ import sys
 import glob
 import os
 
-from helpers import extract_domain
+from helpers import extract_domain, url_logo_dict
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)  # INFO - DEBUG
@@ -16,17 +16,6 @@ i18n_toml = Path(__file__).parent / "i18n.toml"
 latest_format_version = "0.1.1"
 
 generator = "mkdocs-material"
-
-url_logo_dict = {
-    "hub.docker.com" : ":fontawesome-brands-docker:",
-    "www.youtube.com" : ":fontawesome-brands-youtube:",
-    "youtu.be" : ":simple-youtube",
-    "www.behance.net" : ":fontawesome-brands-behance:",
-    "www.fiverr.com" : ":simple-fiverr:",
-    "www.freelancer.com" : ":simple-freelancer:",
-    "www.upwork.com" : ":simple-upwork:",
-    "linktr.ee" : ":simple-linktree:",
-}
 
 
 try:
