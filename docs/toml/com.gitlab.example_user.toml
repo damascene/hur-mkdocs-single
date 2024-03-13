@@ -29,7 +29,15 @@ id = "lap7xv0f"
 
 [[data.website]]
 text = "https://www.gitlab.com/fake_account"
-id = "lap7xv0f"
+id = "lap7xv6f"
+
+[[data.website]]
+text = "https://matrix.to/#/@fake_account:matrix.org"
+id = "lap7xv5f"
+
+[[data.website]]
+text = "https://t.me/fake_account"
+id = "lap7xvnf"
 
 [[data.website]]
 text = "https://www.behance.net/fake_account"
