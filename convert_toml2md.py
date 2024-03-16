@@ -183,6 +183,8 @@ def create_markdown(toml_dict, toml_file, file_language):
             doc.add_raw(f":simple-toml: <a id='toml_file' href='toml/{file_name_stem}.toml'>Toml file!</a>")
         elif generator == "mkdocs-material":
             doc.add_raw(f":simple-toml: <a id='toml_file' href='../toml/{file_name_stem}.toml'>Toml file!</a>")
+        
+        doc.add_raw(f"`file format: {toml_dict['file_format']}`")
 
         # ~ doc.add_heading(contact_accounts_title, 3)
         # ~ doc.add_unordered_list(contact_methods)
@@ -191,42 +193,8 @@ def create_markdown(toml_dict, toml_file, file_language):
 
         doc.dump(f"{sys.argv[2]}/{file_name_stem}")
     else:
-        for i in toml_dict[services]:
-            user_services.append(i)
-
-        catigories = ",".join(user_services)
-        user_skills = toml_dict[tags][skills]
-        skill_tags = ",".join(user_skills)
-
-        doc.add_paragraph(f"Title: {name}")
-        doc.add_paragraph(f"Category: {catigories}")
-        doc.add_paragraph(f"Tags: {skill_tags}")
-
-        doc.add_heading(f"{services_of} {name}")
-
-        for i in toml_dict[services]:
-            user_services.append(i)
-            doc.add_heading(i, 2)
-            for i2, v in toml_dict[services][i].items():
-                doc.add_heading(i2, 3)
-                doc.add_paragraph(v[description])
-
-        for i, v in toml_dict[data][website].items():
-            if v:
-                site_list.append(f"[{i}]({v})")
-
-        for i, v in toml_dict[data][contact_accounts].items():
-            if v:
-                contact_methods.append(f"[{i}]({v})")
-
-        doc.add_heading(websites, 3)
-        doc.add_unordered_list(site_list)
-
-        doc.add_heading(contact_accounts_title, 3)
-        doc.add_unordered_list(contact_methods)
-
-        # ~ doc.output_page(dump_dir="/home/blank/dev/gitlab/hur/freelancers/")
-        doc.dump(f"{sys.argv[2]}/{file_name_stem}")
+        logger.error(f"Fileformat is not supported")
+        raise("Fileformat is not supported")
 
 
 for i in toml_file_list:
