@@ -17,6 +17,7 @@ url_logo_dict = {
     "www.upwork.com" : ":simple-upwork:",
     "linktr.ee" : ":simple-linktree:",
     "t.me" : ":simple-telegram:",
+    "www.linkedin.com" : ":simple-linkedin:",
 }
 
 def extract_domain(url):
