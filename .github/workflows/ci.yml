@@ -26,5 +26,5 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material tomli snakemd
-      - run: python convert_toml2md.py docs/toml/ docs/
+      - run: python convert_toml2md.py toml/ docs/
       - run: mkdocs gh-deploy --force
