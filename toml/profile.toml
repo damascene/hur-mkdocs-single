@@ -8,7 +8,7 @@ name = "John Smith"
 profile_image = "https://picsum.photos/id/175/100/100"
 
 user_description = """
-Senior developer worked on large projects with few team members. I enjoy football and seafood. I've worked in an anonymous corporation for 5 years. :smile:
+**This is an excample profile** Senior developer worked on large projects with few team members. I enjoy football and seafood. I've worked in an anonymous corporation for 5 years. :smile:
 """
 
 hourly_rate = 70
@@ -53,7 +53,7 @@ category = "Programming"
 sub_category = "C"
 title = "Professional C development"
 description = """
-I can help you build your project in C language for maximum speed and efficiency
+I can help you build your project in C language for maximum speed and efficiency.
 
 * test
 * test2
